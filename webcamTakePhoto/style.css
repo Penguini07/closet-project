@@ -1,0 +1,18 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background: #EDF3E3;
+  align-items:center;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+button{
+  border-radius:5px;
+  padding:15px 15px;
+  font-size:15px;
+
+}
