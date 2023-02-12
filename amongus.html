@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Closet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&family=Vollkorn&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="homepage.css">
+    <!--script type="module" src="firebase.js"></script-->
+    <script type="text/javascript" src="homepage.js"></script>
+</head>
+<body>
+
+<!--Nav Bar-->    
+<ul>
+    <!--Dropdown Hamburger-->
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn linkbtn">
+            <!--Hamburger Icon-->
+            <div class="container">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </a>
+        <!--Menu Options-->
+        <div class="dropdown-content">
+            <a href="homepage.html">Home</a>
+            <a href="amongus.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="OOTD.html">OOTD</a>
+            <a href="scan.html">Scan</a>
+            <a href="viewcloset.html">View Closet</a>
+            <a href="sus.html">Sustainability</a>
+        </div>
+      </li>  
+    <!--Title-->
+    <li class="text"><a>Green Closet</a></li>
+    <div class="btncontainer lefttop">
+        <li><a onClick="OpenForm('login')" class="linkbtn loginbtn">Log In</a></li>
+        <li><a onClick="OpenForm('signup')" class="linkbtn loginbtn">Sign Up</a></li>
+    </div>
+    <!--Account Options-->
+    <li class="dropdown account" style="display:none;">
+        <a href="javascript:void(0)" class="dropbtn linkbtn" >Account</a>
+        <div class="dropdown-content">
+            <!--option to log out (should trigger splash login screen again)-->
+            <a href="#" id="logout">Log Out</a>
+        </div>
+      </li>  
+</ul>
+
+
+
+<div class="pagecontent" id="about">
+    <h2 class="header2">About Us</h2>
+    <div id="threeabout">
+        <p>Melody Chen: <br>Melody Chen is a sophomore at The Brearley School (NYC) who worked on the UI for this project. In the past, she has designed and sewn her own clothing. This is the first time she is competing at a hackathon. </p>
+        <p>Georgia Green: <br>Georgia Green is a sophomore at The Brearley School (NYC) who worked on the back end for this project. This is her third Hackathon, but first collegiate-level hackathon.</p>
+        <p> Alyssa Zhou: <br>Alyssa Zhou is a sophomore at The Brearley School (NYC) who worked on camera functionality for this project. This is her fourth Hackathon, but first collegiate-level hackathon.</p>  
+    </div>
+</div>
+
+
+
+
+<div class="formholder">
+    <div class="form-popup" id="signUp">
+        <form class="form-container">
+          <h2>Sign Up</h2>
+      
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" id="SUemail" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" id="SUpsw" required>
+      
+          <button type="submit" class="btn" onclick="SignUp()">Sign Up</button>
+          <button type="button" class="btn cancel" onclick="CloseForm('signup')">Close</button>
+        </form>
+    </div>
+</div>
+
+
+<div class="formholder">
+    <div class="form-popup" id="logIn">
+        <form class="form-container">
+          <h2>Log In</h2>
+      
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+      
+          <button type="submit" class="btn">Login</button>
+          <button type="button" class="btn cancel" onclick="CloseForm('login')">Close</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
+
